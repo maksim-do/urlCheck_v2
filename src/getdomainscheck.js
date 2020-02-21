@@ -34,15 +34,4 @@ const getDomainsCheck = async (domains, attemptCounts, resultCheckList = []) => 
   return resultCheck;
 };
 
-const d = async (domains) => {
-  const a = await checkDomains(getRandomMix(domains));
-  const b = await checkDomains(getRandomMix(domains));
-  const c = await checkDomains(getRandomMix(domains));
-  const result = new Set([...a, ...b, ...c]);
-  console.log(`Этап 1 найдено ${a.length} ресурсов`, a);
-  console.log(`Этап 2 найдено ${b.length} ресурсов`, b);
-  console.log(`Этап 3 найдено ${c.length} ресурсов`, c);
-  return Array.from(result);
-};
-
 export default getDomainsCheck;
